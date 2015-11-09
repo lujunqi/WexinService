@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="prism"
+  id="myeclipse.1311823518593"
+  context-root="/prism"
+  j2ee-spec="5.0"
+  archive="prism.war">
+  <attributes>
+    <attribute name="webrootdir" value="prism" />
+  </attributes>
+</project-module>
+
