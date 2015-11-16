@@ -11,8 +11,19 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>WeiXinAction</servlet-name>
+		<url-pattern>/wx_1</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>WeiXinMLAction</servlet-name>
+		<servlet-class>com.prism.action.WeiXinMLAction</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WeiXinMLAction</servlet-name>
 		<url-pattern>/wx</url-pattern>
 	</servlet-mapping>
+	
 	
 	<servlet>
 		<servlet-name>WeiXinQYAction</servlet-name>

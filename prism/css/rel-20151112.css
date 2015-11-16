@@ -1,0 +1,110 @@
+* {
+	font-family: "微软雅黑";
+}
+.am-header-default {
+	background: white;
+	border-bottom: 5px solid #024C86;
+}
+.am-header-title span {
+	font-size: 20px;
+	font-weight: bolder;
+	color: #9f6305
+}
+.am-radius6 {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+/**************************注册******************************/
+
+.rel_backgroud {
+	background-color: #ececec;
+}
+.rel_input {
+	margin: 30px auto 30px auto;
+	width: 90%;
+}
+.rel_input_1 {
+	width: 60%;
+	float: left;
+}
+.rel_input span {
+	padding-left: 0px;
+	color: #ff0000;
+}
+.rel_input img {
+	float: right;
+}
+.rel_button {
+	width: 35%;
+	height: 100%;
+	background-color: #229ad2;
+	color: #fff;
+	float: right;
+}
+.rel_text a {
+	color: #ff0000;
+}
+.rel_text a:hover {
+	#9f6305;
+}
+.rel_zc {
+	width: 100%;
+	height: 100%;
+	background-color: #CCCCCC;
+	color: #fff;
+}
+.rel_zc:hover {
+	width: 100%;
+	height: 100%;
+	background-color: #9f6305;
+	color: #fff;
+	border: 1px solid #9f6305;
+}
+/*****************************登录************************************/
+
+.login_input {
+	margin: 30px auto 30px auto;
+	width: 90%;
+}
+/*****************************完善资料************************************/
+
+.wsxl_wszlbtn {
+	width: 100%;
+	height: 100%;
+	background-color: #dfb406;
+	color: #fff;
+	border: 1px solid #dfb406;
+}
+.wsxl_wszlbtnblue {
+	width: 100%;
+	height: 100%;
+	background-color: #229ad2;
+	color: #fff;
+	border: 1px solid #229ad2;
+}
+.rel_zca {
+	width: 100%;
+	height: 100%;
+	background-color: #9f6305;
+	color: #fff;
+}
+.wszl_kuang {
+	width: 65%;
+	float: left;
+}
+.wszl_kuang img {
+	margin: auto;
+}
+.wszl_kuang1 {
+	width: 100%;
+	float: left;
+	color: #af700d;
+}
+.wszl_input {
+	margin: 10px auto 10px auto;
+	width: 90%;
+}
+/********************************新闻****************************/
+.news{background-color: #ececec; margin:3px 0px 3px 0px; padding:4px 0 4px 0px;}
+.news img{padding:2px 5px 0px 5px;}

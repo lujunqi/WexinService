@@ -56,6 +56,7 @@ public class WeiXinResponse {
 		System.out.println(j);
 	}
 
+	
 	// 返回文本内容
 	public String resText(Map<String, String> reqMap, String conent)
 			throws Exception {
