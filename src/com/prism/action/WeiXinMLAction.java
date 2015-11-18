@@ -1,30 +1,21 @@
 package com.prism.action;
+
 /**
  * 美伦微信平台
  */
 
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
-import java.net.URL;
-import java.net.URLConnection;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.security.MessageDigest;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
-import java.util.UUID;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -37,7 +28,8 @@ import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 
 import com.prism.action.common.JsonUtil;
-import com.prism.dbutil.VMPreparedStatement;
+
+//http://58.20.37.144/prism/wx
 
 public class WeiXinMLAction extends HttpServlet {
 	private static final long serialVersionUID = 13L;
@@ -45,11 +37,13 @@ public class WeiXinMLAction extends HttpServlet {
 	private static final String APPSECRET = "6710bfe35ed37ec5044d3ee18297db1d";
 
 	private String accesstoken = getAccessToken();
+
 	public void init() throws ServletException {
 		System.out.println("WeiXinction loading..............");
 		// String[] configLocations = new String[] {"config/baseConfig.xml"};
 		// context = new ClassPathXmlApplicationContext(configLocations);
 		setMenu();
+
 	}
 
 	public void service(HttpServletRequest req, HttpServletResponse res)
@@ -100,70 +94,46 @@ public class WeiXinMLAction extends HttpServlet {
 
 				System.out.println("fromUserName=" + fromUserName);
 
-				
-
-
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
-	public void setMenu(){
+	public void setMenu() {
 		String url = String
 				.format(" https://api.weixin.qq.com/cgi-bin/menu/create?access_token=%1$s",
 						accesstoken);
-		System.out.println("==================="+accesstoken);
-		String content = 
 
-" {\n" +
-"\"button\":[\n" + 
-"{\n" + 
-"\"name\":\"关于美伦2\",\n" + 
-"\"sub_button\":[\n" + 
-"{\n" + 
-"\"type\":\"view\",\n" + 
-"\"name\":\"中心简介\",\n" + 
-"\"url\":\"http://10.80.1.188/prism/gywm.html\"\n" + 
-"},\n" + 
-"{\n" + 
-"\"type\":\"view\",\n" + 
-"\"name\":\"美伦服务\",\n" + 
-"\"url\":\"http://v.qq.com/\"\n" + 
-"},\n" + 
-"{\n" + 
-"\"type\":\"view\",\n" + 
-"\"name\":\"美伦专家\",\n" + 
-"\"url\":\"http://v.qq.com/\"\n" + 
-"},\n" + 
-"{\n" + 
-"\"type\":\"click\",\n" + 
-"\"name\":\"联系客服\",\n" + 
-"\"key\":\"V1001_LX_KF\"\n" + 
-"}]\n" + 
-"},\n" + 
-"{\n" + 
-"\"name\":\"健康中心\",\n" + 
-"\"sub_button\":[\n" + 
-"{\n" + 
-"\"type\":\"view\",\n" + 
-"\"name\":\"美伦健康\",\n" + 
-"\"url\":\"http://www.soso.com/\"\n" + 
-"},\n" + 
-"{\n" + 
-"\"type\":\"view\",\n" + 
-"\"name\":\"卓越环境\",\n" + 
-"\"url\":\"http://v.qq.com/\"\n" + 
-"}]\n" + 
-"},\n" + 
-"{\n" + 
-"\"type\":\"view\",\n" + 
-"\"name\":\"健康商城\",\n" + 
-"\"url\":\"http://v.qq.com/\"\n" + 
-"}\n" + 
-"]}";
+		String content =
 
-		
+		" {\n"
+				+ "\"button\":[\n"
+				+ "{\n"
+				+ "\"name\":\"关于美伦2\",\n"
+				+ "\"sub_button\":[\n"
+				+ "{\n"
+				+ "\"type\":\"view\",\n"
+				+ "\"name\":\"中心简介\",\n"
+				+ "\"url\":\"http://10.80.1.188/prism/gywm.html\"\n"
+				+ "},\n"
+				+ "{\n"
+				+ "\"type\":\"view\",\n"
+				+ "\"name\":\"美伦服务\",\n"
+				+ "\"url\":\"https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx71dba835dc454222&redirect_uri=http%3A%2F%2F10.80.1.188%2Fprism%2Fxx.jsp&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect\"\n"
+				+ "},\n" + "{\n" + "\"type\":\"view\",\n"
+				+ "\"name\":\"美伦专家\",\n" + "\"url\":\"http://v.qq.com/\"\n"
+				+ "},\n" + "{\n" + "\"type\":\"click\",\n"
+				+ "\"name\":\"联系客服\",\n" + "\"key\":\"V1001_LX_KF\"\n" + "}]\n"
+				+ "},\n" + "{\n" + "\"name\":\"健康中心\",\n"
+				+ "\"sub_button\":[\n" + "{\n" + "\"type\":\"view\",\n"
+				+ "\"name\":\"美伦健康\",\n" + "\"url\":\"http://www.soso.com/\"\n"
+				+ "},\n" + "{\n" + "\"type\":\"view\",\n"
+				+ "\"name\":\"卓越环境\",\n" + "\"url\":\"http://v.qq.com/\"\n"
+				+ "}]\n" + "},\n" + "{\n" + "\"type\":\"view\",\n"
+				+ "\"name\":\"健康商城\",\n" + "\"url\":\"http://v.qq.com/\"\n"
+				+ "}\n" + "]}";
+
 		JsonUtil ju = new JsonUtil();
 		@SuppressWarnings("unchecked")
 		Map<String, Object> j = (Map<String, Object>) ju.toObject(HttpWeb
