@@ -36,9 +36,9 @@ import org.dom4j.io.SAXReader;
 import com.prism.dbutil.VMPreparedStatement;
 
 public class WeiXinAction extends HttpServlet {
-	private static final long serialVersionUID = 13L;
+	private static final long serialVersionUID = 132L;
 	private static final String APPID = "wx91ece5f3cd87008a";
-	private static final String APPSECRET = "8e065d6337fee7377b645cc4ecdebeac";
+	private static final String APPSECRET = "fmLHYLMDUn8JlQ8Mij78ZblEaglu0TUSQgd22wCpR9Y";
 
 	// private String accesstoken = getAccessToken();
 	public void init() throws ServletException {

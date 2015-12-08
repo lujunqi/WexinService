@@ -11,7 +11,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>WeiXinAction</servlet-name>
-		<url-pattern>/wx_1</url-pattern>
+		<url-pattern>/wx1</url-pattern>
 	</servlet-mapping>
 	
 	<servlet>
